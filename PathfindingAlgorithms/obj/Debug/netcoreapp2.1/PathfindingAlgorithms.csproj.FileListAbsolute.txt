@@ -1,0 +1,11 @@
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\bin\Debug\netcoreapp2.1\PathfindingAlgorithms.deps.json
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\bin\Debug\netcoreapp2.1\PathfindingAlgorithms.runtimeconfig.json
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\bin\Debug\netcoreapp2.1\PathfindingAlgorithms.runtimeconfig.dev.json
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\bin\Debug\netcoreapp2.1\PathfindingAlgorithms.dll
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\bin\Debug\netcoreapp2.1\PathfindingAlgorithms.pdb
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\obj\Debug\netcoreapp2.1\PathfindingAlgorithms.csprojAssemblyReference.cache
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\obj\Debug\netcoreapp2.1\PathfindingAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\obj\Debug\netcoreapp2.1\PathfindingAlgorithms.AssemblyInfoInputs.cache
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\obj\Debug\netcoreapp2.1\PathfindingAlgorithms.AssemblyInfo.cs
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\obj\Debug\netcoreapp2.1\PathfindingAlgorithms.dll
+C:\Users\ncatterson\OneDrive - C2k\programming\C#\Y14\PathfindingAlgorithms\PathfindingAlgorithms\obj\Debug\netcoreapp2.1\PathfindingAlgorithms.pdb
