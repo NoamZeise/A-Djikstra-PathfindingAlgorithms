@@ -19,7 +19,6 @@ namespace PathfindingAlgorithms
             X = x;
             Y = y;
         }
-
         public void Reset()
         {
             Weight = 10000000;
@@ -27,7 +26,6 @@ namespace PathfindingAlgorithms
             Manhatten = 10000000;
             previous = default;
         }
-
         public void setCoords(int x, int y)
         {
             X = x;

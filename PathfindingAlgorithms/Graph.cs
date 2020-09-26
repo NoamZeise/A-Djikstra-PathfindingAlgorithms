@@ -119,22 +119,24 @@ namespace PathfindingAlgorithms
         public List<Node> AStarShortestPath(Node start, Node finish)
         {
             List<Node> nodeQ = new List<Node>();
+            //add all nodes to node queue and 
+            //calculate their manhatten distance to the goal
             foreach (var node in nodes)
-            {
+            { 
                 if (node.Neighbours.Count == 0)
                     continue;
                 node.Reset();
                 node.Manhatten = calcManhatten(node, finish);
                 nodeQ.Add(node);
-            }
-            start.Weight = 0;
+            } 
+            start.Weight = 0; //set start weight to zero, so it is explored first
             start.Visited = true;
             Node shortest;
             while(true)
             {
                 shortest = new Node();
                 foreach(var node in nodes)
-                {
+                { //assign lowest value node to shortest
                     if (node.Weight + node.Manhatten < shortest.Weight + shortest.Manhatten)
                         foreach (var link in node.Neighbours)
                             if (!link.Key.Visited)
@@ -143,7 +145,7 @@ namespace PathfindingAlgorithms
                                 break;
                             }
                     if (node.Weight + node.Manhatten == shortest.Weight + shortest.Manhatten)
-                    {
+                    { //randomly select if there are multiple lowest value paths
                         if(rand.Next() % 2 == 0)
                         foreach (var link in node.Neighbours)
                             if (!link.Key.Visited)
@@ -153,7 +155,8 @@ namespace PathfindingAlgorithms
                             }
                     }
                 }
-                if (shortest.Weight >= new Node().Weight)
+                //if the shortest node is an uncalculated node there must be no vaild paths
+                if (shortest.Weight >= new Node().Weight) 
                     break;
                 bool finishfound = false;
                 foreach(var link in shortest.Neighbours)
@@ -163,22 +166,23 @@ namespace PathfindingAlgorithms
                     link.Key.Visited = true;
                     link.Key.Weight = shortest.Weight + link.Value;
                     link.Key.previous = shortest;
-                    if(link.Key == finish)
+                    if(link.Key == finish) //if one of the neigbours are the end node then a path has been found
                     {
                         shortest = finish;
                         finishfound = true;
                     }
                 }
-                if(finishfound)
+                if(finishfound) //end node found
                     break;
             }
             List<Node> path = new List<Node>();
+            //go through shortest node to previously visted node to get path from finish->start
             while (shortest.previous != default)
-            {
+            { //start value will have default previous node, so means start has been traced back to 
                 path.Add(shortest);
                 shortest = shortest.previous;
                 if (shortest.Weight >= new Node().Weight)
-                {
+                { //if node has default value then there is no available path
                     path.Clear();
                     break;
                 }
@@ -186,12 +190,13 @@ namespace PathfindingAlgorithms
             if (path.Count == 0)
                 Console.WriteLine("NO PATH FOUND");
             path.Add(start);
-            path.Reverse();
+            path.Reverse(); //so is ordered from start->finish
             return path;
         }
 
         int calcManhatten(Node node1, Node node2) =>
              Math.Abs(node1.X - node2.X) + Math.Abs(node1.Y - node2.Y);
 
+       
     }
 }
